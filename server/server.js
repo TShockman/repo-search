@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // add services
-require('./services/github')(app);
+require('./services/search')(app);
+require('./services/bookmarks')(app);
 
-app.listen(process.env.PORT || PORT);
+app.listen(PORT);
