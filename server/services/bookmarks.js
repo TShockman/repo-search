@@ -9,7 +9,6 @@ module.exports = app => {
 
   const bookmarkProject = (req, res) => {
     const repo = req.body;
-    console.log(req.body);
     if (repo) {
       bookmarks.push(repo);
       res.sendStatus(200);
