@@ -1,4 +1,11 @@
+@import '../../../common';
+
 .bookmarksHead {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid $rs-grey;
+  padding: 0 1vw;
+  margin-bottom: 2vh;
 }

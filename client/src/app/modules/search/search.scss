@@ -1,0 +1,27 @@
+@import '../../../common';
+
+.searchHead {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 2px solid $rs-grey;
+  padding: 0 1vw;
+  margin-bottom: 2vh;
+
+  span > * {
+    margin-left: 1vw;
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px solid $rs-grey;
+    font-size: 18px;
+    min-height: 100%;
+    padding: 1vh 2vw 1vh .5vw;
+
+    &::placeholder {
+      color: $rs-grey;
+    }
+  }
+}

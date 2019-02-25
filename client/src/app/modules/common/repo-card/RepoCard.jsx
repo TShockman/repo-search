@@ -10,6 +10,7 @@ export default class RepoCard extends PureComponent {
       full_name: PropTypes.string.isRequired,
       stargazers_count: PropTypes.number.isRequired,
       forks_count: PropTypes.number.isRequired,
+      html_url: PropTypes.string
     }).isRequired,
     bookmark: PropTypes.func
   };
@@ -22,11 +23,11 @@ export default class RepoCard extends PureComponent {
 
   render() {
     const {bookmark, repo} = this.props;
-    const {full_name, stargazers_count, forks_count} = repo;
+    const {full_name, stargazers_count, forks_count, html_url} = repo;
 
     return (
         <div className="repoCard">
-          <h4>{full_name}</h4>
+          <h4><a href={html_url} target={"_blank"} rel="noopener noreferrer">{full_name}</a></h4>
           <p>Stars: {stargazers_count}</p>
           <p>Forks: {forks_count}</p>
           {bookmark && <button onClick={this.handleClick}>Bookmark</button>}

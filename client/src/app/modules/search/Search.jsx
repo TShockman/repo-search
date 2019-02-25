@@ -42,10 +42,12 @@ export default class Search extends PureComponent {
 
     return (
       <section>
-        <div className="search">
+        <div className="searchHead">
           <h2>Search</h2>
-          <input onChange={this.handleInputChange} onKeyPress={this.handleKeyPress} value={query}/>
-          <button onClick={this.handleClick} disabled={query.length === 0}>Submit</button>
+          <span>
+            <input onChange={this.handleInputChange} onKeyPress={this.handleKeyPress} value={query} placeholder="Enter a search query"/>
+            <button onClick={this.handleClick} disabled={query.length === 0}>Submit</button>
+          </span>
         </div>
         <RepoList repos={repos} bookmark={bookmark}/>
       </section>

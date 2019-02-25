@@ -15,19 +15,31 @@ code {
     monospace;
 }
 
+h1, h2, h3, h4, h5, h6, div, p, span {
+  color: $rs-black;
+}
+
 a {
-  color: $rs-darkgrey;
+  color: $rs-link;
 }
 
 button {
   background-color: $rs-green;
-  color: $rs-lightgrey;
+  color: white;
+  border: 2px solid $rs-darkgrey;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1vh 2vw;
 
   &:disabled {
-    background-color: $rs-darkgrey;
+    background-color: $rs-lightgrey;
+    color: $rs-grey
   }
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
+

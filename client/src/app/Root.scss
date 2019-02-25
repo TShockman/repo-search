@@ -1,3 +1,15 @@
+@import '../common';
+
 .bodySection {
   margin-top: 10vh;
+
+  @media screen and (max-width: $width-cutoff){
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $width-cutoff + 1px){
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
 }
