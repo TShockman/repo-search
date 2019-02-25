@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux'
-import {Route, Switch} from 'react-router' // react-router v4
+import {Route, Switch, Redirect} from 'react-router' // react-router v4
 import {ConnectedRouter} from 'connected-react-router'
 import {createStore, history} from './store';
-import Nav from './modules/nav/Nav';
+import Nav from './modules/nav';
+import Bookmarks from './modules/bookmarks';
 
 import './Root.scss';
 
@@ -12,7 +13,6 @@ const store = createStore();
 
 class Root extends Component {
   render() {
-    console.log('rendering root')
     return (
         <Provider store={store}>
           <ConnectedRouter history={history}>
@@ -20,8 +20,8 @@ class Root extends Component {
               <Nav/>
               <div className="bodySection">
                 <Switch>
-                  <Route exact path="/" render={() => (<div>Match</div>)} />
-                  <Route render={() => (<div>Miss</div>)} />
+                  <Route exact path="/bookmarks" component={Bookmarks}/>
+                  <Redirect to="/bookmarks"/>
                 </Switch>
               </div>
             </div>

@@ -5,6 +5,7 @@
   color: $rs-black;
   border: 3px solid $rs-darkgrey;
   border-radius: 3px;
+  padding: 2vh 2vw;
 
   @media screen and (max-width: $width-cutoff){
     width: 90vw;

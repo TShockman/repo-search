@@ -14,7 +14,7 @@ export default class RepoService {
 
   static get instance() {
     if(!this[_singleton]) {
-      this[_singleton] = new EmpaticaService(_singleton);
+      this[_singleton] = new RepoService(_singleton);
     }
     return this[_singleton];
   }
@@ -27,9 +27,10 @@ export default class RepoService {
 
   // create a bookmark
   createBookmark(rid) {
+    console.log('fetching bookmarks')
     return fetch(`${BOOKMARK_API}`, {
       method:'post',
-      body: json.stringify({rid})
+      body: JSON.stringify({rid})
     }).then(parseResponse);
   }
 

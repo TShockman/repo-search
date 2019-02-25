@@ -14,15 +14,22 @@ export default class RepoCard extends PureComponent {
     bookmark: PropTypes.func
   };
 
+  handleClick = event => {
+    event.stopPropagation();
+    const {bookmark, repo} = this.props;
+    bookmark({repo});
+  };
+
   render() {
-    const {full_name, stargazers_count, forks_count} = this.props.repo;
+    const {bookmark, repo} = this.props;
+    const {full_name, stargazers_count, forks_count} = repo;
 
     return (
         <div className="repoCard">
-          <h2>full_name</h2>
+          <h2>{full_name}</h2>
           <p>Stars: {stargazers_count}</p>
           <p>Forks: {forks_count}</p>
-          <button>Bookmark</button>
+          {bookmark && <button>Bookmark</button>}
         </div>
     )
   }

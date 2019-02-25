@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import RepoCard from '../repo-card/RepoCard';
+import RepoCard from '../repo-card';
 
 import './repo-list.scss';
 
