@@ -22,6 +22,10 @@ a {
 button {
   background-color: $rs-green;
   color: $rs-lightgrey;
+
+  &:disabled {
+    background-color: $rs-darkgrey;
+  }
 }
 
 *, *:before, *:after {

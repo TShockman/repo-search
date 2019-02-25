@@ -26,12 +26,14 @@ export default class RepoService {
   }
 
   // create a bookmark
-  createBookmark(rid) {
-    console.log('fetching bookmarks')
+  createBookmark(repo) {
     return fetch(`${BOOKMARK_API}`, {
       method:'post',
-      body: JSON.stringify({rid})
-    }).then(parseResponse);
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repo)
+    });
   }
 
   // get all bookmarks

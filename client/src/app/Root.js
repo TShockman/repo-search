@@ -5,6 +5,7 @@ import {ConnectedRouter} from 'connected-react-router'
 import {createStore, history} from './store';
 import Nav from './modules/nav';
 import Bookmarks from './modules/bookmarks';
+import Search from './modules/search';
 
 import './Root.scss';
 
@@ -21,7 +22,8 @@ class Root extends Component {
               <div className="bodySection">
                 <Switch>
                   <Route exact path="/bookmarks" component={Bookmarks}/>
-                  <Redirect to="/bookmarks"/>
+                  <Route exact path="/search" component={Search}/>
+                  <Redirect to="/search"/>
                 </Switch>
               </div>
             </div>

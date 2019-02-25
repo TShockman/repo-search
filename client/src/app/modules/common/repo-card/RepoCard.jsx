@@ -17,7 +17,7 @@ export default class RepoCard extends PureComponent {
   handleClick = event => {
     event.stopPropagation();
     const {bookmark, repo} = this.props;
-    bookmark({repo});
+    bookmark(repo);
   };
 
   render() {
@@ -29,7 +29,7 @@ export default class RepoCard extends PureComponent {
           <h4>{full_name}</h4>
           <p>Stars: {stargazers_count}</p>
           <p>Forks: {forks_count}</p>
-          {bookmark && <button>Bookmark</button>}
+          {bookmark && <button onClick={this.handleClick}>Bookmark</button>}
         </div>
     )
   }

@@ -8,7 +8,8 @@ export const BookmarkState = new Record({
 export default (state = new BookmarkState(), action) => {
   switch (action.type) {
     case ADD_BOOKMARK: {
-      return state.set('repos', state.get('repos').push(action.repo));
+      const newRepos = [...state.get('repos'), action.repo];
+      return state.set('repos', newRepos);
     }
     case GET_BOOKMARKS_FULFILLED: {
       return state.set('repos', action.repos);
