@@ -1,3 +1,5 @@
+@import './common.scss';
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +13,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  color: $rs-darkgrey;
+}
+
+button {
+  background-color: $rs-green;
+  color: $rs-lightgrey;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }

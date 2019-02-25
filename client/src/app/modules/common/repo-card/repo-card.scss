@@ -1,0 +1,17 @@
+@import '../../../../common';
+
+.repoCard {
+  background-color: $rs-lightgrey;
+  color: $rs-black;
+  border: 3px solid $rs-darkgrey;
+  border-radius: 3px;
+
+  @media screen and (max-width: $width-cutoff){
+    width: 90vw;
+  }
+
+  @media screen and (max-width: $width-cutoff + 1px){
+    width: 25vw;
+  }
+}
+
