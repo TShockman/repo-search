@@ -26,7 +26,7 @@ export default class RepoCard extends PureComponent {
 
     return (
         <div className="repoCard">
-          <h2>{full_name}</h2>
+          <h4>{full_name}</h4>
           <p>Stars: {stargazers_count}</p>
           <p>Forks: {forks_count}</p>
           {bookmark && <button>Bookmark</button>}

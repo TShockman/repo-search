@@ -8,11 +8,11 @@
   padding: 2vh 2vw;
 
   @media screen and (max-width: $width-cutoff){
-    width: 90vw;
+    min-width: 90vw;
   }
 
-  @media screen and (max-width: $width-cutoff + 1px){
-    width: 25vw;
+  @media screen and (min-width: $width-cutoff + 1px){
+    min-width: 25vw;
   }
 }
 
