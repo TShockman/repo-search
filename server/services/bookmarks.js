@@ -8,9 +8,10 @@ const bookmarks = require('../static/starter-bookmarks.json');
 module.exports = app => {
 
   const bookmarkProject = (req, res) => {
-    const {rid} = req.body;
-    if (rid) {
-      bookmarks.push(rid);
+    const repo = req.body;
+    console.log(req.body);
+    if (repo) {
+      bookmarks.push(repo);
       res.sendStatus(200);
     } else {
       res.sendStatus(400);
