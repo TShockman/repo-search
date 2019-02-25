@@ -14,7 +14,7 @@ module.exports = app => {
     axios.get(`${GITHUB_API_BASE}/search/repositories?q=${term}&sort=${GITHUB_SEARCH_SORT}`)
         .then(githubRes => {
           if (githubRes.status === 200) {
-            res.send(githubRes.data);
+            res.send(githubRes.data.items);
           } else {
             res.sendStatus(githubRes.status);
           }
