@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "connected-react-router": "^6.3.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "history": "^4.7.2",
     "immutable": "^4.0.0-rc.12",
     "node-sass": "^4.11.0",
@@ -14,6 +16,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
+    "react-test-renderer": "^16.8.3",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.1",
     "typescript": "^3.3.3333"

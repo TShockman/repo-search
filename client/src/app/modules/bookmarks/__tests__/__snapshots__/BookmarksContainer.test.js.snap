@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookmarksContainer Provides Bookmarks with correct props 1`] = `
+<Bookmarks
+  getBookmarks={[Function]}
+  repos={
+    Array [
+      Object {
+        "full_name": "OneTwo/Three",
+        "id": 123,
+      },
+      Object {
+        "full_name": "FourFive/Six",
+        "id": 456,
+      },
+      Object {
+        "full_name": "SevenEight/Nine",
+        "id": 789,
+      },
+    ]
+  }
+/>
+`;

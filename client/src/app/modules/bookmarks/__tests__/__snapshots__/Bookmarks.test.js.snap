@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bookmarks component renders consistently 1`] = `
+<section>
+  <div
+    className="bookmarksHead"
+  >
+    <h2>
+      Bookmarks
+    </h2>
+    <button
+      onClick={[Function]}
+    >
+      Refresh
+    </button>
+  </div>
+  <RepoList
+    repos={
+      Array [
+        Object {
+          "forks_count": 1,
+          "full_name": "test/mock",
+          "html_url": "http://fake.io",
+          "id": 123,
+          "stargazers_count": 444,
+        },
+        Object {
+          "forks_count": 2,
+          "full_name": "test2/mock2",
+          "html_url": "http://fake.com",
+          "id": 456,
+          "stargazers_count": 4444,
+        },
+        Object {
+          "forks_count": 3,
+          "full_name": "test3/mock3",
+          "html_url": "http://fake.edu",
+          "id": 789,
+          "stargazers_count": 44444,
+        },
+      ]
+    }
+  />
+</section>
+`;

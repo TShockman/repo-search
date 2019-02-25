@@ -5,7 +5,6 @@ import {selectBookmarksState} from './selectors';
 
 function mapStateToProps(state) {
   const {repos} = selectBookmarksState(state);
-  console.log(repos);
   return {repos};
 }
 

@@ -12,6 +12,7 @@ export default class Bookmarks extends PureComponent {
           full_name: PropTypes.string.isRequired,
           stargazers_count: PropTypes.number.isRequired,
           forks_count: PropTypes.number.isRequired,
+          html_url: PropTypes.string
         })).isRequired,
     getBookmarks: PropTypes.func.isRequired
   };

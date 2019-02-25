@@ -2,7 +2,7 @@ import {all, takeLatest, call, takeEvery, put} from 'redux-saga/effects';
 import {ADD_BOOKMARK, GET_BOOKMARKS_FULFILLED, GET_BOOKMARKS_REQUESTED} from './actions';
 import RepoService from '../../services/RepoService';
 
-const bookmarksService = RepoService.instance;
+export const bookmarksService = RepoService.instance;
 
 export function * getBookmarks() {
   const bookmarks = yield call(bookmarksService.getBookmarks);
